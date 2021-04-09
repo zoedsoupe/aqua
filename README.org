@@ -1,0 +1,9 @@
+#+title: Matthew's handcrafted Emacs
+#+author: Matheus de Souza Pessanha
+#+email: matheus_pessanha2001@outlook.com
+
+This my own emacs "distro" that I'm trying to build myself!
+
+I all configs are based on my opinions and personal "tastes".
+
+Feel free to contribute or fork it!
