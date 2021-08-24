@@ -36,14 +36,14 @@
       (remq 'process-kill-buffer-query-function
 	    kill-buffer-query-functions)) ; disable confirmation on killing buffer
 
+(defun font-exists-p (font) 
+  "check if font exists" 
+  (if (null (x-list-fonts font)) nil t))
+
 (set-face-attribute 'default nil :font "JetBrains Mono Medium Medium Nerd Font Complete Mono" :height 120)
 (set-face-attribute 'fixed-pitch nil
                     :font "JetBrains Mono Medium Medium Nerd Font Complete"
                     :height 120)
-(set-face-attribute 'variable-pitch nil
-                    :font "Victor Mono Regular Nerd Font Complete"
-                    :height 120
-                    :weight 'regular)
 
 (add-hook 'prog-mode-hook 'electric-pair-mode)
 (add-hook 'prog-mode-hook 'show-paren-mode)

@@ -16,6 +16,7 @@ with pkgs;
       agda2-mode
       hl-todo
       doom-modeline
+      doom-themes
       nix-mode
       neotree
       git-gutter-fringe
