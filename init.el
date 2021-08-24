@@ -26,32 +26,6 @@
 ;; to load all config files
 (add-to-list 'load-path (expand-file-name "elisp" user-emacs-directory))
 
-;; packages
-(require 'package)
-(setq package-archives
-      '(("melpa" . "https://melpa.org/packages/")
-	("melpa-stablne" . "https://stable.melpa.org/packages/")
-	("org" . "https://orgmode.org/elpa/")
-	("elpa" . "https://elpa.gnu.org/packages/")))
-
-(defvar my-packages)
-(setq my-packages
-      '(dashboard centaur-tabs hl-todo git-gutter-fringe blackout
-		  vterm magit gist rainbow-delimiters rainbow-mode projectile
-		  paredit flycheck elixir-mode alchemist exunit flycheck-credo
-		  erlang haskell-mode attrap use-package org js2-mode rjsx-mode
-		  typescript-mode js2-refactor markdown-mode markdown-toc grip-mode
-		  edit-indirect fish-mode emmet-mode web-mode css-mode less-css-mode
-		  sass-mode toml-mode yaml-mode json-mode all-the-icons emojify
-		  page-break-lines yasnippet flycheck-popup-tip format-all
-		  org-cliplink org-pdftools orgit org-brain org-download
-		  centered-window org-tree-slide which-key ob-elixir org-bullets
-		  bind-key gnu-elpa-keyring-update selectrum orderless
-		  consult consult-flycheck evil-nerd-commenter paradox mix
-		  yasnippet-snippets dumb-jump minions mmm-mode org
-		  org-wild-notifier package-lint pdf-tools auctex-latexmk
-		  reftex auto-dictionary))
-
 ;; straight.el bootstrap
 (defvar bootstrap-version)
 (let ((bootstrap-file
@@ -65,10 +39,6 @@
       (goto-char (point-max))
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
-
-;; install packages
-(dolist (package my-packages)
-  (straight-use-package package))
 
 (use-package mmm-mode
   :straight t)
