@@ -40,9 +40,9 @@
   "check if font exists" 
   (if (null (x-list-fonts font)) nil t))
 
-(set-face-attribute 'default nil :font "JetBrains Mono Medium Medium Nerd Font Complete Mono" :height 120)
+(set-face-attribute 'default nil :font "JetBrainsMono Nerd Font Mono" :height 120)
 (set-face-attribute 'fixed-pitch nil
-                    :font "JetBrains Mono Medium Medium Nerd Font Complete"
+                    :font "JetBrainsMono Nerd Font Mono"
                     :height 120)
 
 (add-hook 'prog-mode-hook 'electric-pair-mode)
