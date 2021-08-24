@@ -56,7 +56,6 @@ with pkgs;
       page-break-lines
       yasnippet-snippets
       flycheck-popup-tip
-      format-all
       org-cliplink
       org-pdftools
       orgit

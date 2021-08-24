@@ -112,7 +112,6 @@
 (require 'init-neotree)
 (require 'init-vterm)
 (require 'init-paredit)
-(require 'init-format)
 
 ;; lang-modes
 (require 'init-markdown)
