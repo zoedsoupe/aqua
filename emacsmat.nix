@@ -13,7 +13,7 @@ with pkgs;
     extraPackages = epkgs: with epkgs; [
       dashboard
       centaur-tabs
-      agda-mode
+      agda2-mode
       hl-todo
       doom-modeline
       nix-mode
