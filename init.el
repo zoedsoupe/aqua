@@ -92,6 +92,9 @@
   :straight t
   :init (org-wild-notifier-mode))
 
+(load-file (let ((coding-system-for-read 'utf-8))
+                (shell-command-to-string "agda-mode locate")))
+
 ;; general and bootstrap config
 (require 'init-dashboard)
 (require 'init-basic)
