@@ -51,6 +51,25 @@
 (add-to-list 'auto-mode-alist '("\\.html.eex\\'" . mhtml-mode))
 (add-to-list 'auto-mode-alist '("\\.html.leex\\'" . mhtml-mode))
 
+(add-to-list 'load-path "./libs/")
+
+(defun screenshot (beg end)
+  "Take a screenshot of the current region or buffer.
+  Region included in screenshot is the active selection, interactively,
+  or given by BEG and END. Buffer is used if region spans 0-1 characters."
+  (interactive (if (region-active-p)
+                   (list (region-beginning) (region-end))
+                 (list (point-min) (point-max))))
+  (deactivate-mark)
+
+  (require 'screenshot)
+  (screenshot--set-screenshot-region beg end)
+
+  (setq screenshot--tmp-file
+        (make-temp-file "screenshot-" nil ".png"))
+
+  (screenshot-transient))
+
 (mmm-add-classes
  '((eex-elixir
     :submode elixir-mode
