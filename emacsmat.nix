@@ -17,6 +17,7 @@ with pkgs;
       hl-todo
       doom-modeline
       doom-themes
+      racket-mode
       nix-mode
       neotree
       git-gutter-fringe
