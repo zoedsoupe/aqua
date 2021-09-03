@@ -24,7 +24,9 @@
                      gcs-done)))
 
 ;; to load all config files
-(add-to-list 'load-path (expand-file-name "elisp" user-emacs-directory))
+(add-to-list 'load-path
+	     (expand-file-name "elisp" user-emacs-directory)
+	     (expand-file-name "libs" user-emacs-directory))
 
 ;; straight.el bootstrap
 (defvar bootstrap-version)
@@ -50,8 +52,6 @@
 
 (add-to-list 'auto-mode-alist '("\\.html.eex\\'" . mhtml-mode))
 (add-to-list 'auto-mode-alist '("\\.html.leex\\'" . mhtml-mode))
-
-(add-to-list 'load-path "./libs/")
 
 (defun screenshot (beg end)
   "Take a screenshot of the current region or buffer.
@@ -85,7 +85,6 @@
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t)
   (load-theme 'doom-dracula t)
-  (doom-themes-visual-bell-config)
   (doom-themes-neotree-config)
   (doom-themes-org-config))
 
