@@ -24,9 +24,8 @@
                      gcs-done)))
 
 ;; to load all config files
-(add-to-list 'load-path
-	     (expand-file-name "elisp" user-emacs-directory)
-	     (expand-file-name "libs" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "elisp" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "libs" user-emacs-directory))
 
 ;; straight.el bootstrap
 (defvar bootstrap-version)

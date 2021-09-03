@@ -13,6 +13,7 @@ with pkgs;
     enable = true;
     extraPackages = epkgs: with epkgs; [
       dashboard
+      posframe
       centaur-tabs
       agda2-mode
       hl-todo
