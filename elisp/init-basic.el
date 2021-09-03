@@ -7,7 +7,7 @@
 
 ;; BASIC CONFIG---------------------------------------------
 (setq user-full-name "Matheus de Souza Pessanha"
-      user-mail-address "mdsp@boosting.tech")
+      user-mail-address "matheus_pessanha2001@outlook.com")
 
 ;; Editor---------------------------------------------------
 (menu-bar-mode -1) ; disable menu bar
@@ -36,14 +36,16 @@
       (remq 'process-kill-buffer-query-function
 	    kill-buffer-query-functions)) ; disable confirmation on killing buffer
 
-(defun font-exists-p (font) 
-  "check if font exists" 
+(defun font-exists-p (font)
+  "Check if FONT exists."
   (if (null (x-list-fonts font)) nil t))
 
-(set-face-attribute 'default nil :font "JetBrainsMono Nerd Font Mono" :height 140)
+(set-face-attribute 'default nil
+		    :font "JetBrainsMono Nerd Font Mono"
+		    :height 160)
 (set-face-attribute 'fixed-pitch nil
                     :font "JetBrainsMono Nerd Font Mono"
-                    :height 140)
+                    :height 160)
 
 (add-hook 'prog-mode-hook 'electric-pair-mode)
 (add-hook 'prog-mode-hook 'show-paren-mode)

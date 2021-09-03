@@ -5,6 +5,7 @@ with pkgs;
 {
   xdg.configFile."emacs/init.el".source = ./init.el;
   xdg.configFile."emacs/elisp".source = ./elisp;
+  xdg.configFile."emacs/libs".source = ./libs;
 
   services.emacs.enable = true;
 
