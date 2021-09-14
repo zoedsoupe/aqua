@@ -2,6 +2,14 @@
 
 with pkgs;
 
+let
+  prolog-mode-over = epkgs: epkgs.prolog-mode.overrideAttrs (oldAttrs: rec {
+    src = builtins.fetchurl {
+      url = "http://bruda.ca/_media/emacs/prolog.el";
+      sha256 = "ZzIDFQWPq1vI9z3btgsHgn0axN6uRQn9Tt8TnqGybOk=";
+    };
+  });
+in
 {
   xdg.configFile."emacs/init.el".source = ./init.el;
   xdg.configFile."emacs/elisp".source = ./elisp;
@@ -33,7 +41,7 @@ with pkgs;
       flycheck
       elixir-mode
       alchemist
-      prolog-mode
+      (prolog-mode-over epkgs)
       flycheck-credo
       erlang
       haskell-mode
