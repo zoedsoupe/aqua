@@ -41,8 +41,6 @@
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
 
-(require 'ligature)
-
 (use-package mmm-mode
   :straight t)
 

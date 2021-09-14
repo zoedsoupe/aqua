@@ -15,7 +15,10 @@
 (tool-bar-mode -1) ; disable tool bar
 (set-fringe-mode 10)
 (setq visible-bell nil) ; disable visual bell
+(setq ring-bell-function 'ignore) ; disable sounds
 (setq indent-tabs-mode nil) ; changes from tabs to spaces
+(setq inhibit-compacting-font-caches t) ; don’t compact font caches during GC
+(setq find-file-visit-truename t) ; follow symlinks
 
 (setq backup-directory-alist
             `((".*" . ,temporary-file-directory)))
@@ -110,6 +113,21 @@
 (setq scroll-step 1
       scroll-margin 0
       scroll-conservatively 100000)
+
+;; Modeline-----------------------------------------------
+(use-package doom-modeline
+  :ensure t
+  :straight t
+  :hook (after-init . doom-modeline-mode)
+  :config
+  (setq doom-modeline-icon (display-graphic-p))
+  (setq doom-modeline-major-mode-icon t)
+  (setq doom-modeline-major-mode-color-icon t)
+  (setq doom-modeline-buffer-state-icon t)
+  (setq doom-modeline-buffer-modification-icon t)
+  (setq doom-modeline-buffer-encoding t)
+  (setq doom-modeline-indent-info t)
+  (setq doom-modeline-checker-simple-format t))
 
 ;; Better Commenter----------------------------------------
 (use-package evil-nerd-commenter

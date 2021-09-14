@@ -33,6 +33,7 @@ with pkgs;
       flycheck
       elixir-mode
       alchemist
+      prolog-mode
       flycheck-credo
       erlang
       haskell-mode
