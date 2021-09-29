@@ -27,6 +27,9 @@
 (add-to-list 'load-path (expand-file-name "elisp" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "libs" user-emacs-directory))
 
+;; auth files
+(setq auth-sources '("~/.authinfo.gpg" "~/.authinfo" "~/.netrc"))
+
 ;; straight.el bootstrap
 (defvar bootstrap-version)
 (let ((bootstrap-file

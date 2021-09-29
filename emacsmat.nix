@@ -34,6 +34,7 @@ in
       vterm
       magit
       gist
+      github-review
       rainbow-delimiters
       rainbow-mode
       projectile
