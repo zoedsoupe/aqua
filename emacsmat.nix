@@ -3,6 +3,12 @@
 with pkgs;
 
 let
+  org-over = epkgs: epkgs.org.overrideAttrs (oldAttrs: rec {
+    src = builtins.fetchurl {
+      url = "https://orgmode.org/elpa/org-20210920.tar";
+      sha256 = "01b44npf0rxq7c4ddygc3n3cv3h7afs41az0nfs67a5x7ag6c1jj";
+    };
+  });
   prolog-mode-over = epkgs: epkgs.prolog-mode.overrideAttrs (oldAttrs: rec {
     src = builtins.fetchurl {
       url = "http://bruda.ca/_media/emacs/prolog.el";
@@ -52,7 +58,7 @@ in
       js2-refactor
       attrap
       use-package
-      org
+      (org-over epkgs)
       markdown-mode
       markdown-toc
       edit-indirect
