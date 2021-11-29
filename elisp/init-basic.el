@@ -45,10 +45,10 @@
 
 (set-face-attribute 'default nil
 		    :font "JetBrainsMono Nerd Font Mono"
-		    :height 150)
+		    :height 140)
 (set-face-attribute 'fixed-pitch nil
                     :font "JetBrainsMono Nerd Font Mono"
-                    :height 150)
+                    :height 140)
 
 (add-hook 'prog-mode-hook 'electric-pair-mode)
 (add-hook 'prog-mode-hook 'show-paren-mode)
