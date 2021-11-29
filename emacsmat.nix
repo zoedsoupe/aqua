@@ -55,7 +55,6 @@ in
       alchemist
       (prolog-mode-over epkgs)
       flycheck-credo
-      erlang
       haskell-mode
       js2-mode
       rjsx-mode
@@ -94,8 +93,6 @@ in
       paradox
       auto-package-update
       minions
-
-      gcc perl
     ];
   };
 }
