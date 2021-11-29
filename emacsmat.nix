@@ -94,6 +94,8 @@ in
       paradox
       auto-package-update
       minions
+
+      gcc perl
     ];
   };
 }
