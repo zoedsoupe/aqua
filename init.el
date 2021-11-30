@@ -109,6 +109,10 @@
 
 (centaur-tabs-headline-match)
 
+(use-package direnv
+  :config
+  (direnv-mode))
+
 (use-package org-wild-notifier
   :straight t
   :init (org-wild-notifier-mode))

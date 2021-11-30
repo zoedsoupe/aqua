@@ -57,6 +57,7 @@ in
       flycheck-credo
       haskell-mode
       js2-mode
+      direnv
       rjsx-mode
       typescript-mode
       js2-refactor
