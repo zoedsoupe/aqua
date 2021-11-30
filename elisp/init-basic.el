@@ -17,6 +17,8 @@
 (setq visible-bell nil) ; disable visual bell
 (setq ring-bell-function 'ignore) ; disable sounds
 (setq indent-tabs-mode nil) ; changes from tabs to spaces
+(setq-default tab-width 2)
+(setq indent-line-function 'insert-tab)
 (setq inhibit-compacting-font-caches t) ; don’t compact font caches during GC
 (setq find-file-visit-truename t) ; follow symlinks
 
