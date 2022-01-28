@@ -1,6 +1,6 @@
-#+title: Matthew's handcrafted Emacs
-#+author: Matheus de Souza Pessanha
-#+email: matheus_pessanha2001@outlook.com
+#+title: Zoey's handcrafted Emacs
+#+author: Zoey de Souza Pessanha
+#+email: zoey.spessanha@outlook.com
 
 This my own emacs "distro" that I'm trying to build myself!
 

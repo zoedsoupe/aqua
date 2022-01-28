@@ -6,8 +6,8 @@
 ;;; Code:
 
 ;; BASIC CONFIG---------------------------------------------
-(setq user-full-name "Matheus de Souza Pessanha"
-      user-mail-address "matheus_pessanha2001@outlook.com")
+(setq user-full-name "Zoey de Souza Pessanha"
+      user-mail-address "zoey.spessanha@outlook.com")
 
 ;; Editor---------------------------------------------------
 (menu-bar-mode -1) ; disable menu bar
